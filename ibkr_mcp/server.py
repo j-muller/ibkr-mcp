@@ -44,5 +44,5 @@ async def get_positions() -> list[dict[str, Any]]:
     ]
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()

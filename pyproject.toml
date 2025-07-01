@@ -9,6 +9,13 @@ dependencies = [
     "ibapi>=9.81.1.post1",
 ]
 
+[project.scripts]
+ibkr-mcp = "ibkr_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [dependency-groups]
 dev = [
     "ruff>=0.12.1",

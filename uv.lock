@@ -206,7 +206,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/cc/78/8f1322aa1be1fe7d7
 [[package]]
 name = "ibkr-mcp"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "fastmcp" },
     { name = "ibapi" },
