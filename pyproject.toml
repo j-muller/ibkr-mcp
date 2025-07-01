@@ -1,0 +1,45 @@
+[project]
+name = "ibkr-mcp"
+version = "0.1.0"
+description = "A simple MCP server for Interactive Brokers"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=2.9.2",
+    "ibapi>=9.81.1.post1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.1",
+    "ty>=0.0.1a12",
+]
+
+[tool.mypy-ibapi]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 99
+target-version = "py313"
+lint.select = [
+    "ALL", # include all the rules, including new ones
+]
+lint.ignore = [
+    ## modules
+    "ANN", # flake8-annotations
+
+    ## specific rules
+    "D100",   # ignore missing docs
+    "D104",  # ignore missing docs in public package
+    "TC001",  # ignore type hinting blocks
+    "TRY400",  # ignore logging.exception instead of logging.error
+    "D213",
+    "D203",
+    "COM812",
+    "ISC001",
+    "TD002",
+    "TD003",
+    "FIX002",
+    "PGH003",
+    "S101",
+]
